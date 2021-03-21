@@ -1,0 +1,18 @@
+#cresult_col{
+    margin-top: 2%;
+    background-color: rgba(255, 255, 255, 0.6); 
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+}
+#icon{
+    width: 200px;
+    height: 200px;
+}
+.tableview{
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center;
+}
+.result{
+    float: center;
+}

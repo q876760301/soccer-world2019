@@ -1,0 +1,28 @@
+<div id="competitorcol" title="select tean name can change the team.
+select ball can choose the competitor.">
+  <img src="../../assets/competitor.png" alt="Team" height="50%" width="50%"/>
+  <ul *ngFor = "let t of team_rank?.standings[0].table | teamsort" >
+    <li id="{{nowteam(t.team.id)}}" >
+      <a [routerLink]="['/team',t.team.id]" title="change your team">
+        <img src="{{t.team.crestUrl}}" alt="Team Icon" width="20" height="20"/>
+        {{t.team.name}}
+      </a>
+      {{haschoose(t.team.id)}}
+      <div *ngIf="c(t.team.id); then dchecked; else elsechecked"></div>
+      <ng-template #dchecked>
+        <label >
+          <input title="select team competitor" type="radio" name="competitor_team" value="{{t.team.id}}" (change)="radiochange($event)" checked>
+          <img src="../../assets/Soccer World.png" height="30" width="30"/>
+        </label>
+      </ng-template>
+
+      <ng-template #elsechecked>
+          <label >
+            <input title="select team competitor" type="radio" name="competitor_team" value="{{t.team.id}}" (change)="radiochange($event)">
+            <img src="../../assets/Soccer World.png" height="30" width="30"/>
+          </label>
+      </ng-template>
+    </li>
+  </ul>
+  <br>
+</div>

@@ -1,0 +1,18 @@
+#clast_result_col{
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+#icon{
+    width: 200px;
+    height: 200px;
+}
+.tableview{
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center;
+}
+.result{
+    float: center;
+}

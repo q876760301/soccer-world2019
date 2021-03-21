@@ -1,0 +1,14 @@
+.hide_page_number /deep/ .ngx-pagination li:not(.pagination-previous):not(.pagination-next){
+    display: none;
+}
+#upcoming_col{
+    background-color:rgba(255, 255, 255, 0.6);
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+}
+.hometeam{
+    text-align: left;
+}
+.awayteam{
+    text-align: right;
+}

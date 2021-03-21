@@ -1,0 +1,14 @@
+
+<div id="teamcol">
+  <img src="../../assets/Team.png" alt="Team" height="50%" width="50%"/>
+  <ul *ngFor = "let t of team_rank?.standings[0].table | teamsort" style="list-style: none">
+    <li style="text-align: left">
+      <a [routerLink]="['/team',t.team.id]" routerLinkActive="active current" (click)="getteam.set_teamName(t.team.name);getteam.set_id(t.team.id);">
+      <img src="{{t.team.crestUrl}}" alt="Team Icon" width="20" height="20"/>
+      {{t.team.name}}
+      </a>
+    </li>
+  </ul>
+  <br>
+</div>
+

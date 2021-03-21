@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4" id="leftside">
+            <app-competitor></app-competitor>
+        </div>
+        <div class="col-sm-8" id="center">
+            <div *ngIf="(getcomp.getid() == '')||(teamid == getcomp.getid()); then thenBlock; else elseBlock"></div>
+        </div>
+    </div>
+</div>
+
+<ng-template #thenBlock>
+    <app-last-result></app-last-result>
+    <app-team-result></app-team-result>
+</ng-template>
+
+<ng-template #elseBlock>
+    <app-clast-result></app-clast-result>
+    <app-cresult></app-cresult>
+</ng-template>

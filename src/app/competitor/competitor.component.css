@@ -1,0 +1,39 @@
+#competitorcol{
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+}
+
+#nowteam{
+    color: red;
+    text-align: left;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+#competitor{
+    color: black;
+    text-align: left;
+}
+
+ul{
+    list-style: none;
+}
+
+label{
+    float: right;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+}
+
+label img {
+    filter:grayscale(80%);
+}
+
+input:checked + img {
+    filter: none;
+}

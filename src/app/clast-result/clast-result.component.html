@@ -1,0 +1,23 @@
+<div id="clast_result_col">
+        <img src="../../assets/Comprtitor Result.png" alt="LastResult" height="30%" width="30%" >
+        <table style="width: 100%">
+            <thead style="display: none">
+                <tr>
+                    <th>HOME TEAM</th>
+                    <th>SCORES</th>
+                    <th>AWAY TEAM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of Matchesd?.matches | Status:'FINISHED' | resultFilter: teamid | resultFilter: getcomp.getid() | resultSort | slice: 0 : 1">
+                    <td class="tableview"> <img id="icon" src="{{getIcon(r.homeTeam.id)}}"/> 
+                        <br>{{r.homeTeam.name}}</td>
+                    <td class="tableview" style="font-size: 50px"> {{r.score.fullTime.homeTeam}} - {{r.score.fullTime.awayTeam}}</td>      
+                    <td class="tableview"> <img id="icon" src="{{getIcon(r.awayTeam.id)}}"/>
+                        <br>{{r.awayTeam.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+          
